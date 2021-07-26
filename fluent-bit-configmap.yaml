@@ -48,7 +48,7 @@ data:
 
   output-elasticsearch.conf: |
     [OUTPUT]
-	Name            es
+    	Name            es
 	Match           *
 	Host            ${CLOUD_ELASTICSEARCH_HOST}
 	Port            ${CLOUD_ELASTICSEARCH_PORT}
