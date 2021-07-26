@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: fluent-bit
-  namespace: logging2
+  namespace: logging
   labels:
     k8s-app: fluent-bit-logging
     version: v1
@@ -43,7 +43,7 @@ spec:
           valueFrom:
             configMapKeyRef:
               name: elasticsearch-configmap
-              key: CLOUD_ELASTICSEARCH_HOST
+              key: CLOUD_ELASTICSEARCH_ID
         - name: CLOUD_ELASTICSEARCH_USER
           valueFrom:
             secretKeyRef:
