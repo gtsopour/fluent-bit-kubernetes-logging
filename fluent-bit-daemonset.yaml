@@ -32,17 +32,17 @@ spec:
         - name: CLOUD_ELASTICSEARCH_HOST
           valueFrom:
             configMapKeyRef:
-              name: elasticsearch-deployment
+              name: elasticsearch-configmap
               key: CLOUD_ELASTICSEARCH_HOST
         - name: CLOUD_ELASTICSEARCH_PORT
           valueFrom:
             configMapKeyRef:
-              name: elasticsearch-deployment
+              name: elasticsearch-configmap
               key: CLOUD_ELASTICSEARCH_PORT
         - name: CLOUD_ELASTICSEARCH_ID
           valueFrom:
             configMapKeyRef:
-              name: elasticsearch-deployment
+              name: elasticsearch-configmap
               key: CLOUD_ELASTICSEARCH_HOST
         - name: CLOUD_ELASTICSEARCH_USER
           valueFrom:
