@@ -48,18 +48,13 @@ data:
 
   output-elasticsearch.conf: |
     [OUTPUT]
-    	Name            es
-	Match           *
-	Host            ${CLOUD_ELASTICSEARCH_HOST}
-	Port            ${CLOUD_ELASTICSEARCH_PORT}
-	cloud_id        ${CLOUD_ELASTICSEARCH_ID}
-	cloud_auth      ${CLOUD_ELASTICSEARCH_USER}:${CLOUD_ELASTICSEARCH_PASSWORD}
-	Logstash_Format On
-	Logstash_Prefix my-cluster-${HOST_NAME}-
-	Replace_Dots    On
-	Retry_Limit     False
-	tls             On
-	tls.verify      Off
+        Name            es
+        Match           *
+        Host            ${FLUENT_ELASTICSEARCH_HOST}
+        Port            ${FLUENT_ELASTICSEARCH_PORT}
+        Logstash_Format On
+        Replace_Dots    On
+        Retry_Limit     False
 
   parsers.conf: |
     [PARSER]
