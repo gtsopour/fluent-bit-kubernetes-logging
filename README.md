@@ -23,6 +23,7 @@ Please create a new namespace with the name logging for the Fluent Bit deploymen
 
 ## Create Fluent Bit ConfigMap
 The next step is to create a ConfigMap that will be used by the Fluent Bit DaemonSet.
+
 `kubectl create -f https://raw.githubusercontent.com/gtsopour/fluent-bit-kubernetes-logging/master/fluent-bit-configmap.yaml`
 
 ## Create Fluent Bit DaemonSet
